@@ -2,13 +2,35 @@
 
 The **Profanity Module** in Dataphyre is designed to detect and score instances of profanity across various languages, accounting for different types of swearing such as abusive, emphatic, or cathartic. This module uses a combination of text analysis and rule-based pattern matching to detect and analyze profanity in user input, enhancing moderation capabilities for applications that integrate it.
 
-#### Key Profanity Types
+### Key Profanity Types
 
 - **Dysphemistic Swearing**: Conveys negative connotations about subjects or audiences (e.g., "You look like shit!").
+  - **Dataset**: `swearing_dysphemistic.php`
+  
 - **Abusive Swearing**: Intended to insult or intimidate (e.g., "Fuck you!").
-- **Idiomatic Swearing**: Used casually to assert coolness or grab attention (e.g., "Hell yeah").
-- **Emphatic Swearing**: Used for emphasis (e.g., "This tastes fucking great!").
-- **Cathartic Swearing**: Expresses frustration or pain (e.g., "Damn this coffee!").
+  - **Dataset**: `swearing_abusive.php`
+
+### Additional Content Sensitivity Components
+
+These are other content moderation categories supported by existing datasets:
+
+- **CSAM (Child Sexual Abuse Material)**: Used to detect illegal content related to child exploitation.
+  - **Dataset**: `csam.php`
+
+- **Extremism**: Detects terms associated with radical or extremist ideologies.
+  - **Dataset**: `extremism.php`
+
+- **Politically Sensitive**: Flags content that may be sensitive or controversial in political contexts.
+  - **Dataset**: `politically_sensitive.php`
+
+- **Product**: Detects generic product-related terms.
+  - **Dataset**: `product.php`
+
+- **Adult Products**: Flags products with adult or explicit themes.
+  - **Dataset**: `product_adult.php`
+
+- **Self-Harm**: Flags terms related to self-harm or suicidal ideation.
+  - **Dataset**: `self_harm.php`
 
 #### Components
 
