@@ -2,6 +2,8 @@
 
 The **Datadoc Module** within Dataphyre serves as a documentation manager and reference system, primarily for projects written in PHP. It allows structured management of project files, references, and dynamic and manual documentation (Dynadoc and Manudoc). The module relies on SQLite databases to store file and documentation data and provides tools for creating, synchronizing, and updating project documentation.
 
+![Dataphyre Datadoc Function Documentation Example](Datadoc_Function_Example.png "Dataphyre Datadoc Function Documentation Example")
+
 #### Core Functionalities
 
 1. **Authentication and Session Management**
@@ -48,5 +50,3 @@ The **Datadoc Module** within Dataphyre serves as a documentation manager and re
 ### Summary
 
 The Datadoc module supports documentation creation and synchronization for PHP projects, helping manage references to variables, functions, classes, and namespaces within a project. It provides Dynadoc for dynamic, automated documentation and Manudoc for manually structured documentation, storing metadata and content in SQLite databases for efficient reference and retrieval. The Datadoc module’s hierarchical structure makes it adaptable for complex projects requiring organized, searchable documentation.
-
-![Dataphyre Datadoc Function Documentation Example](Datadoc_Function_Example.png "Dataphyre Datadoc Function Documentation Example")
