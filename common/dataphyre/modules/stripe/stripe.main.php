@@ -13,7 +13,6 @@
  * This software is provided "as is", without any warranty of any kind.
  */
 
-
 namespace dataphyre;
 
 tracelog(__FILE__,__LINE__,__CLASS__,__FUNCTION__, $T="Loaded");
@@ -23,9 +22,6 @@ if(file_exists($filepath=$rootpath['common_dataphyre']."config/stripe.php")){
 }
 if(file_exists($filepath=$rootpath['dataphyre']."config/stripe.php")){
 	require_once($filepath);
-}
-if(!isset($configurations['dataphyre']['stripe'])){
-	//core::unavailable("MOD_STRIPE_NO_CONFIG", "safemode");
 }
 
 class stripe {
