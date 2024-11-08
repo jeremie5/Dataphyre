@@ -16,7 +16,7 @@
 
 /*************** DATAPHYRE  ***************/
 try{
-	require_once($rootpath['common_dataphyre']."core.php");
+	require_once($rootpath['common_dataphyre']."core/core.main.php");
 }catch(\Throwable $e){
 	if(function_exists("log_error")){
 		pre_init_error("Failed to initiate Dataphyre: ".$e->getFile().": ".$e->getLine().": ".$e->getMessage());
