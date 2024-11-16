@@ -15,6 +15,8 @@
 
 namespace dataphyre;
 
+tracelog(__FILE__,__LINE__,__CLASS__,__FUNCTION__, $T="Module initialization");
+
 cdn_server::$storage_filepath=$rootpath['dataphyre']."cdn_content/storage";
 
 $configurations['dataphyre']['cdn_server']=[

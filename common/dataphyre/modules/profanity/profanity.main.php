@@ -13,18 +13,11 @@
  * This software is provided "as is", without any warranty of any kind.
  */
 
-
 namespace dataphyre;
 
-tracelog(__FILE__,__LINE__,__CLASS__,__FUNCTION__, $T="Loaded");
+tracelog(__FILE__,__LINE__,__CLASS__,__FUNCTION__, $T="Module initialization");
 
 dp_module_required('profanity', 'fulltext_engine');
-
-// Dysphemistic swearing gives a negative input either to the subject matter or to the audience, or both. (This tastes/you look like shit!)
-// Abusive swearing is used to abuse, intimidate or insult others (Fuck you!/You son of a bitch!)
-// Idiomatic swearing is using the words to grab attention and assert coolness, or express to peers that the setting is informal. (Fuck, man./Hell, yeah.)
-// Emphatic swearing is emphasing something with swearing. (It was funny as shit/This tastes fucking great!)
-// Cathartic swearing is used when something bad happens, like getting hurt, dropping stuff or feeling bad. Theory: you tell the audience that you're undergoing a negative emotion. (Aww, fuck!/Damn this coffee)
 
 class profanity{
 
@@ -35,6 +28,7 @@ class profanity{
     }
 	
 	public function evaluate(string $string, string $ruleset, string $language='en'){
+		tracelog(__FILE__,__LINE__,__CLASS__,__FUNCTION__, $T=null, $S='function_call', $A=func_get_args()); // Log the function call
 		global $rootpath;
 		global $cached_profanity_rulesets;
 		if(str_contains($language, "-")){
@@ -53,6 +47,7 @@ class profanity{
 	}
 	
 	public function unscrub(string $string, array $languages=array('en')){
+		tracelog(__FILE__,__LINE__,__CLASS__,__FUNCTION__, $T=null, $S='function_call', $A=func_get_args()); // Log the function call
 		global $rootpath;
 		global $cached_unscrub_rulesets;
 		$languages=array_unique($languages);
@@ -128,6 +123,7 @@ class profanity{
 	}
 
 	public function verify(string $string, array $rules, string $language='en'){
+		tracelog(__FILE__, __LINE__, __CLASS__, __FUNCTION__, $S = null, $T = 'function_call', $A = func_get_args()); // Log the function call
 		if(!empty($rules)){
 			$index_name=$rules['ruleset_type'].'_'.$language;
 			$rules=$rules['rules'];

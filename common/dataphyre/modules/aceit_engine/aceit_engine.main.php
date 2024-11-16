@@ -13,8 +13,9 @@
  * This software is provided "as is", without any warranty of any kind.
  */
 
-
 namespace dataphyre;
+
+tracelog(__FILE__,__LINE__,__CLASS__,__FUNCTION__, $T="Module initialization");
 
 dp_module_required('sql', 'aceit_engine');
 

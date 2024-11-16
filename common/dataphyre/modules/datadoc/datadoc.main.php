@@ -16,6 +16,8 @@
 
 namespace dataphyre;
 
+tracelog(__FILE__,__LINE__,__CLASS__,__FUNCTION__, $T="Module initialization");
+
 dp_module_required('datadoc', 'sql');
 
 if(file_exists($filepath=$rootpath['common_dataphyre']."config/datadoc.php")){
